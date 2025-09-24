@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Morgan - Interactive Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Loading Screen -->
+        <div id="loadingScreen" class="loading-screen">
+            <div class="spinner"></div>
+            <p>Loading Portfolio...</p>
+        </div>
+
+        <header>
+            <div class="profile-header">
+                <div class="avatar-container">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                         alt="Alex Morgan" class="profile-img">
+                    <div class="online-status"></div>
+                </div>
+                <div class="header-text">
+                    <h1>Alex Morgan</h1>
+                    <p class="tagline">Full Stack Developer & UI/UX Enthusiast</p>
+                </div>
+            </div>
+            <div class="theme-toggle">
+                <span>Dark Mode</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </header>
+        
+        <section id="about" class="section-card">
+            <h2>About Me</h2>
+            <p>Hello! I'm Alex, a passionate full-stack developer with over 5 years of experience building web applications that solve real-world problems.</p>
+            
+            <div class="interactive-area">
+                <h3>Quick Facts</h3>
+                <button id="factButton" class="animated-btn">Show Random Fact</button>
+                <p id="factDisplay">Click the button to learn something interesting about me!</p>
+            </div>
+            
+            <div class="counter">
+                <div class="counter-item">
+                    <div class="counter-number" id="projectCount">0</div>
+                    <div>Projects Completed</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="clientCount">0</div>
+                    <div>Happy Clients</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="experienceCount">0</div>
+                    <div>Years of Experience</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills" class="section-card">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-container">
+                <div class="skill" data-skill="javascript">JavaScript</div>
+                <div class="skill" data-skill="react">React</div>
+                <div class="skill" data-skill="node">Node.js</div>
+                <div class="skill" data-skill="html">HTML5</div>
+                <div class="skill" data-skill="css">CSS3</div>
+                <div class="skill" data-skill="python">Python</div>
+            </div>
+            
+            <div class="interactive-area">
+                <h3>Skill Explorer</h3>
+                <p>Click on any skill above to see details</p>
+                <div id="skillDetails" class="skill-details"></div>
+            </div>
+        </section>
+        
+        <section id="animation-demo" class="section-card">
+            <h2>Animation Playground</h2>
+            
+            <div class="interactive-area">
+                <h3>CSS Animation Controls</h3>
+                <div class="animation-controls">
+                    <button id="bounceBtn" class="animated-btn">Bounce Animation</button>
+                    <button id="spinBtn" class="animated-btn">Spin Animation</button>
+                    <button id="pulseBtn" class="animated-btn">Pulse Animation</button>
+                    <button id="shakeBtn" class="animated-btn">Shake Animation</button>
+                </div>
+                
+                <div id="animationBox" class="animation-box">
+                    <p>Animation Preview</p>
+                </div>
+            </div>
+            
+            <div class="interactive-area">
+                <h3>Card Flip Demo</h3>
+                <p>Click on the card to flip it:</p>
+                <div class="card-container">
+                    <div id="flipCard" class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h4>Front Side</h4>
+                                <p>Click to see the back</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Back Side</h4>
+                                <p>JavaScript powered!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" class="section-card">
+            <h2>Interactive Features</h2>
+            
+            <div class="interactive-area">
+                <h3>Counter Game with Animation</h3>
+                <div class="counter-display" id="counterValue">0</div>
+                <div class="counter-controls">
+                    <button id="decrementButton" class="animated-btn">-</button>
+                    <button id="incrementButton" class="animated-btn">+</button>
+                    <button id="resetCounter" class="animated-btn">Reset</button>
+                    <button id="setCounter" class="animated-btn">Set to 10</button>
+                </div>
+            </div>
+            
+            <div class="interactive-area">
+                <h3>Animated Modal</h3>
+                <button id="openModal" class="animated-btn">Open Modal</button>
+                
+                <div id="demoModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn">&times;</span>
+                        <h3>Animated Modal</h3>
+                        <p>This modal appears with a smooth CSS animation triggered by JavaScript!</p>
+                        <button id="closeModal" class="animated-btn">Close</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="section-card">
+            <h2>Contact Form</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name">
+                    <div class="error" id="nameError">Please enter a valid name</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="text" id="email" placeholder="Enter your email">
+                    <div class="error" id="emailError">Please enter a valid email address</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" placeholder="Your message" rows="4"></textarea>
+                    <div class="error" id="messageError">Message must be between 10-500 characters</div>
+                </div>
+                
+                <button type="submit" class="animated-btn">Send Message</button>
+                
+                <div class="success-message" id="successMessage">
+                    Message sent successfully!
+                </div>
+            </form>
+        </section>
+        
+        <footer>
+            <p>Interactive Portfolio - CSS Animations & JavaScript Demo</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
